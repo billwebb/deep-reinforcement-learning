@@ -73,3 +73,6 @@ Fixed Q-Targets are utilized so the the model currently being used to step throu
 - Learning rate - 0.0005 - how much model is updated in proporation to calculated error during backpropogation
 - Update Every - 4 - how often to perform learning during the episode.  Allows agent to run against a stable model and make updates in enough data
 
+#### Results
+
+Within **500 episodes**, this model resulted in an **average score of > 13**.
