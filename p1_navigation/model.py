@@ -1,3 +1,5 @@
+# Implementation heavily based on Lesson 2 Deep Q-Networks lesson exercise
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F

@@ -1,3 +1,5 @@
+# Implementation heavily based on Lesson 2 Deep Q-Networks lesson exercise
+
 import numpy as np
 import random
 from collections import namedtuple, deque
