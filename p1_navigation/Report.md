@@ -1,4 +1,4 @@
-Project 1: Navigation
+## Project 1: Navigation
 
 **Project Submission by Bill Webb**
 
@@ -25,23 +25,21 @@ The task is episodic, and in order to solve the environment, your agent must get
 
 Deep Q-Learning is used to solve the project.  Q-Learning allows the agent to learn a policy without any knowledge of the environement.  Through succesive episodes, the agent gains feedback through rewards based on the action it takes.  
 
-![Q Learning][https://skymind.ai/images/wiki/simple_RL_schema.png]
-
 To improve on the Q-Learning algorithm, Experience Replay and Fixed Q-Targets were used.  A neural network was used for the state-action mapping based on rewards.  The following algorithm was used to solve the problem -
 
 - Initialize replay memory with size 100,000
 - Initialize local and target action-value NN with random weights
 - For 500 episodes
--- Initialize epsiode and get initial state
--- For each step until done
---- Choose action based on epislon greedy algorithm
---- Take action and get reward and next-state
---- Store experience in replay memory
---- Update to next-step
---- Every 4 steps - perform learning
----- Obtain random batch of 64 from replay memory
----- Set target based on batch samples
----- Calculate error from target vs. current and update with backpropogation
+    - Initialize epsiode and get initial state
+    - For each step until done
+    - Choose action based on epislon greedy algorithm
+    - Take action and get reward and next-state
+    - Store experience in replay memory
+    - Update to next-step
+    - Every 4 steps - perform learning
+        - Obtain random batch of 64 from replay memory
+        - Set target based on batch samples
+        - Calculate error from target vs. current and update with backpropogation
 
 #### Deep Learning
 
