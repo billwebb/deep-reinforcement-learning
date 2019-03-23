@@ -76,3 +76,10 @@ Fixed Q-Targets are utilized so the the model currently being used to step throu
 #### Results
 
 Within **500 episodes**, this model resulted in an **average score of > 13**.
+
+#### Ideas for Future Work
+
+- Prioritized Replay - Yellow and Blue Banana transitions are the most interesting as they result in positive and negative rewards.  Prioritize the replay of these tuples
+- Rainbow - implement Prioritized Replay along with Double DQN and Dueling DQN 
+
+- Implement the Navigation Pixels version of the problem. This will require a CNN to interpret the pixels from the screen
