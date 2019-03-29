@@ -26,19 +26,34 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 
 The task is episodic, and in order to solve the environment, your agent must get an average score of +13.  The problem is solved with a average score of +13 after approximately 500 episodes.
 
-### Getting Started
+### Dependencies
 
-1. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
-    - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
-    - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
-    - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip)
-    - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip)
-        
-2. Place the file in the DRLND GitHub repository, in the `p1_navigation/` folder, and unzip (or decompress) the file. 
+To set up your python environment to run the code in this repository, follow the instructions below.  This was done on an Ubuntu target.
 
-3. Install pytorch - `apt install torch`
+1. Create and activate a new enivronment with Python 3.6.
 
-4. Install Unity https://unity3d.com/get-unity/download
+``` bash
+conda create --name drlnd python=3.6
+source activate drlnd
+```
+
+2. Clone the repository, and navigate to the python/ folder. Then, install several dependencies, including Pytorch.
+
+``` bash
+git clone https://github.com/billwebb/deep-reinforcement-learning
+cd deep-reinforcement-learning/python
+pip install .
+```
+
+3. Install Unity following these instructions - https://github.com/billwebb/deep-reinforcement-learning
+
+4. Create an IPython kernel for the drlnd environment.
+
+``` bash
+python -m ipykernel install --user --name drlnd --display-name "drlnd"
+```
+
+5. Before running code in a notebook, change the kernel to match the `drlnd` environment by using the drop-down `Kernel` menu.
 
 
 ### Instructions
