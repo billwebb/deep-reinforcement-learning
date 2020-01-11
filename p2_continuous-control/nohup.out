@@ -1,0 +1,286 @@
+Found path: /home/billw/project/dl/udacity/deep-reinforcement-learning/p2_continuous-control/./Reacher_Linux_NoVis/Reacher.x86_64
+Mono path[0] = '/home/billw/project/dl/udacity/deep-reinforcement-learning/p2_continuous-control/./Reacher_Linux_NoVis/Reacher_Data/Managed'
+Mono config path = '/home/billw/project/dl/udacity/deep-reinforcement-learning/p2_continuous-control/./Reacher_Linux_NoVis/Reacher_Data/MonoBleedingEdge/etc'
+Preloaded 'libgrpc_csharp_ext.x64.so'
+Unable to preload the following plugins:
+	libgrpc_csharp_ext.x86.so
+Logging to /home/billw/.config/unity3d/Unity Technologies/Unity Environment/Player.log
+INFO:unityagents:
+'Academy' started successfully!
+Unity Academy name: Academy
+        Number of Brains: 1
+        Number of External Brains : 1
+        Lesson number : 0
+        Reset Parameters :
+		goal_size -> 5.0
+		goal_speed -> 1.0
+Unity brain name: ReacherBrain
+        Number of Visual Observations (per agent): 0
+        Vector Observation space type: continuous
+        Vector Observation space size (per agent): 33
+        Number of stacked Vector Observation: 1
+        Vector Action space type: continuous
+        Vector Action space size (per agent): 4
+        Vector Action descriptions: , , , 
+/home/billw/anaconda3/envs/pytorch_again/lib/python3.6/site-packages/torch/nn/functional.py:1340: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+Number of agents: 20
+Size of each action: 4
+Number of states: 33
+Episode 1 (167 sec)  -- 	Min: 0.0	Max: 1.0	Mean: 0.4	Mov. Avg: 0.4
+Episode 2 (173 sec)  -- 	Min: 0.0	Max: 1.1	Mean: 0.5	Mov. Avg: 0.4
+Episode 3 (175 sec)  -- 	Min: 0.0	Max: 2.2	Mean: 1.0	Mov. Avg: 0.6
+Traceback (most recent call last):
+  File "p2.py", line 95, in <module>
+    scores, avgs = ddpg()
+  File "p2.py", line 62, in ddpg
+    agent.step(state, action, reward, next_state, done, t)
+  File "/home/billw/project/dl/udacity/deep-reinforcement-learning/p2_continuous-control/ddpg_agent.py", line 71, in step
+    self.learn(experiences, GAMMA)
+  File "/home/billw/project/dl/udacity/deep-reinforcement-learning/p2_continuous-control/ddpg_agent.py", line 103, in learn
+    actions_next = self.actor_target(next_states)
+  File "/home/billw/anaconda3/envs/pytorch_again/lib/python3.6/site-packages/torch/nn/modules/module.py", line 541, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/billw/project/dl/udacity/deep-reinforcement-learning/p2_continuous-control/model.py", line 43, in forward
+    return F.tanh(self.fc3(x))
+  File "/home/billw/anaconda3/envs/pytorch_again/lib/python3.6/site-packages/torch/nn/modules/module.py", line 541, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/billw/anaconda3/envs/pytorch_again/lib/python3.6/site-packages/torch/nn/modules/linear.py", line 87, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/home/billw/anaconda3/envs/pytorch_again/lib/python3.6/site-packages/torch/nn/functional.py", line 1370, in linear
+    ret = torch.addmm(bias, input, weight.t())
+KeyboardInterrupt
+Found path: /home/billw/project/dl/udacity/deep-reinforcement-learning/p2_continuous-control/./Reacher_Linux_NoVis/Reacher.x86_64
+Mono path[0] = '/home/billw/project/dl/udacity/deep-reinforcement-learning/p2_continuous-control/./Reacher_Linux_NoVis/Reacher_Data/Managed'
+Mono config path = '/home/billw/project/dl/udacity/deep-reinforcement-learning/p2_continuous-control/./Reacher_Linux_NoVis/Reacher_Data/MonoBleedingEdge/etc'
+Preloaded 'libgrpc_csharp_ext.x64.so'
+Unable to preload the following plugins:
+	libgrpc_csharp_ext.x86.so
+Logging to /home/billw/.config/unity3d/Unity Technologies/Unity Environment/Player.log
+INFO:unityagents:
+'Academy' started successfully!
+Unity Academy name: Academy
+        Number of Brains: 1
+        Number of External Brains : 1
+        Lesson number : 0
+        Reset Parameters :
+		goal_speed -> 1.0
+		goal_size -> 5.0
+Unity brain name: ReacherBrain
+        Number of Visual Observations (per agent): 0
+        Vector Observation space type: continuous
+        Vector Observation space size (per agent): 33
+        Number of stacked Vector Observation: 1
+        Vector Action space type: continuous
+        Vector Action space size (per agent): 4
+        Vector Action descriptions: , , , 
+Number of agents: 20
+Size of each action: 4
+Number of states: 33
+/home/billw/anaconda3/envs/pytorch_again/lib/python3.6/site-packages/torch/nn/functional.py:1340: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+Episode 1 (171 sec)  -- 	Min: 0.0	Max: 1.0	Mean: 0.4	Mov. Avg: 0.4
+Episode 2 (174 sec)  -- 	Min: 0.0	Max: 1.1	Mean: 0.5	Mov. Avg: 0.4
+Episode 3 (170 sec)  -- 	Min: 0.0	Max: 2.2	Mean: 1.0	Mov. Avg: 0.6
+Episode 4 (170 sec)  -- 	Min: 0.4	Max: 3.0	Mean: 1.5	Mov. Avg: 0.9
+Episode 5 (171 sec)  -- 	Min: 0.0	Max: 2.2	Mean: 0.5	Mov. Avg: 0.8
+Episode 6 (171 sec)  -- 	Min: 0.0	Max: 2.7	Mean: 0.9	Mov. Avg: 0.8
+Episode 7 (172 sec)  -- 	Min: 0.5	Max: 2.8	Mean: 1.3	Mov. Avg: 0.9
+Episode 8 (172 sec)  -- 	Min: 1.9	Max: 3.9	Mean: 2.7	Mov. Avg: 1.1
+Episode 9 (172 sec)  -- 	Min: 0.8	Max: 4.7	Mean: 2.5	Mov. Avg: 1.3
+Episode 10 (173 sec)  -- 	Min: 0.8	Max: 4.7	Mean: 2.6	Mov. Avg: 1.4
+Episode 11 (176 sec)  -- 	Min: 1.3	Max: 4.2	Mean: 2.7	Mov. Avg: 1.5
+Episode 12 (174 sec)  -- 	Min: 0.6	Max: 6.6	Mean: 2.6	Mov. Avg: 1.6
+Episode 13 (175 sec)  -- 	Min: 1.0	Max: 5.2	Mean: 2.5	Mov. Avg: 1.7
+Episode 14 (175 sec)  -- 	Min: 0.6	Max: 5.0	Mean: 3.4	Mov. Avg: 1.8
+Episode 15 (176 sec)  -- 	Min: 1.0	Max: 5.6	Mean: 3.5	Mov. Avg: 1.9
+Episode 16 (177 sec)  -- 	Min: 1.9	Max: 6.7	Mean: 4.0	Mov. Avg: 2.0
+Episode 17 (178 sec)  -- 	Min: 1.6	Max: 7.8	Mean: 4.1	Mov. Avg: 2.2
+Episode 18 (178 sec)  -- 	Min: 2.8	Max: 7.6	Mean: 4.5	Mov. Avg: 2.3
+Episode 19 (179 sec)  -- 	Min: 1.2	Max: 6.9	Mean: 4.3	Mov. Avg: 2.4
+Episode 20 (180 sec)  -- 	Min: 2.6	Max: 8.3	Mean: 5.0	Mov. Avg: 2.5
+Episode 21 (181 sec)  -- 	Min: 2.6	Max: 16.4	Mean: 6.0	Mov. Avg: 2.7
+Episode 22 (182 sec)  -- 	Min: 1.5	Max: 8.8	Mean: 4.7	Mov. Avg: 2.8
+Episode 23 (183 sec)  -- 	Min: 3.2	Max: 13.4	Mean: 5.9	Mov. Avg: 2.9
+Episode 24 (184 sec)  -- 	Min: 3.1	Max: 10.5	Mean: 6.0	Mov. Avg: 3.0
+Episode 25 (185 sec)  -- 	Min: 2.2	Max: 8.3	Mean: 5.6	Mov. Avg: 3.1
+Episode 26 (186 sec)  -- 	Min: 2.2	Max: 9.1	Mean: 6.0	Mov. Avg: 3.3
+Episode 27 (187 sec)  -- 	Min: 1.9	Max: 12.9	Mean: 6.5	Mov. Avg: 3.4
+Episode 28 (188 sec)  -- 	Min: 2.9	Max: 10.2	Mean: 5.7	Mov. Avg: 3.5
+Episode 29 (189 sec)  -- 	Min: 1.9	Max: 8.8	Mean: 6.2	Mov. Avg: 3.6
+Episode 30 (190 sec)  -- 	Min: 2.7	Max: 11.2	Mean: 5.9	Mov. Avg: 3.6
+Episode 31 (190 sec)  -- 	Min: 5.2	Max: 11.4	Mean: 7.5	Mov. Avg: 3.8
+Episode 32 (192 sec)  -- 	Min: 3.6	Max: 17.6	Mean: 7.5	Mov. Avg: 3.9
+Episode 33 (193 sec)  -- 	Min: 5.4	Max: 12.8	Mean: 7.9	Mov. Avg: 4.0
+Episode 34 (194 sec)  -- 	Min: 6.0	Max: 14.7	Mean: 8.8	Mov. Avg: 4.1
+Episode 35 (195 sec)  -- 	Min: 5.3	Max: 12.2	Mean: 8.5	Mov. Avg: 4.3
+Episode 36 (195 sec)  -- 	Min: 5.0	Max: 12.5	Mean: 7.7	Mov. Avg: 4.4
+Episode 37 (197 sec)  -- 	Min: 5.9	Max: 11.2	Mean: 7.9	Mov. Avg: 4.5
+Episode 38 (198 sec)  -- 	Min: 4.6	Max: 10.2	Mean: 7.3	Mov. Avg: 4.5
+Episode 39 (198 sec)  -- 	Min: 5.4	Max: 10.8	Mean: 7.5	Mov. Avg: 4.6
+Episode 40 (199 sec)  -- 	Min: 3.8	Max: 10.7	Mean: 7.3	Mov. Avg: 4.7
+Episode 41 (200 sec)  -- 	Min: 5.1	Max: 14.2	Mean: 8.2	Mov. Avg: 4.8
+Episode 42 (202 sec)  -- 	Min: 0.3	Max: 10.2	Mean: 6.9	Mov. Avg: 4.8
+Episode 43 (202 sec)  -- 	Min: 6.3	Max: 16.5	Mean: 8.7	Mov. Avg: 4.9
+Episode 44 (204 sec)  -- 	Min: 4.5	Max: 13.8	Mean: 7.5	Mov. Avg: 5.0
+Episode 45 (205 sec)  -- 	Min: 3.6	Max: 19.4	Mean: 8.6	Mov. Avg: 5.0
+Episode 46 (206 sec)  -- 	Min: 5.3	Max: 10.3	Mean: 8.0	Mov. Avg: 5.1
+Episode 47 (207 sec)  -- 	Min: 0.6	Max: 16.3	Mean: 8.2	Mov. Avg: 5.2
+Episode 48 (207 sec)  -- 	Min: 5.7	Max: 20.1	Mean: 9.2	Mov. Avg: 5.3
+Episode 49 (208 sec)  -- 	Min: 2.4	Max: 12.5	Mean: 8.2	Mov. Avg: 5.3
+Episode 50 (209 sec)  -- 	Min: 5.6	Max: 14.9	Mean: 9.1	Mov. Avg: 5.4
+Episode 51 (210 sec)  -- 	Min: 5.3	Max: 12.0	Mean: 8.8	Mov. Avg: 5.5
+Episode 52 (211 sec)  -- 	Min: 6.1	Max: 18.9	Mean: 10.6	Mov. Avg: 5.6
+Episode 53 (211 sec)  -- 	Min: 5.1	Max: 13.4	Mean: 9.3	Mov. Avg: 5.6
+Episode 54 (211 sec)  -- 	Min: 3.4	Max: 17.1	Mean: 10.1	Mov. Avg: 5.7
+Episode 55 (211 sec)  -- 	Min: 6.4	Max: 14.1	Mean: 9.8	Mov. Avg: 5.8
+Episode 56 (211 sec)  -- 	Min: 6.3	Max: 17.4	Mean: 10.2	Mov. Avg: 5.9
+Episode 57 (211 sec)  -- 	Min: 4.7	Max: 12.6	Mean: 9.3	Mov. Avg: 5.9
+Episode 58 (211 sec)  -- 	Min: 5.5	Max: 17.2	Mean: 9.4	Mov. Avg: 6.0
+Episode 59 (210 sec)  -- 	Min: 3.4	Max: 15.0	Mean: 9.4	Mov. Avg: 6.0
+Episode 60 (211 sec)  -- 	Min: 4.8	Max: 16.0	Mean: 10.0	Mov. Avg: 6.1
+Episode 61 (211 sec)  -- 	Min: 6.3	Max: 15.9	Mean: 10.9	Mov. Avg: 6.2
+Episode 62 (211 sec)  -- 	Min: 5.0	Max: 15.6	Mean: 10.3	Mov. Avg: 6.3
+Episode 63 (211 sec)  -- 	Min: 4.0	Max: 17.9	Mean: 10.6	Mov. Avg: 6.3
+Episode 64 (211 sec)  -- 	Min: 6.8	Max: 14.4	Mean: 10.7	Mov. Avg: 6.4
+Episode 65 (211 sec)  -- 	Min: 2.3	Max: 19.7	Mean: 10.5	Mov. Avg: 6.5
+Episode 66 (211 sec)  -- 	Min: 5.6	Max: 11.9	Mean: 9.0	Mov. Avg: 6.5
+Episode 67 (211 sec)  -- 	Min: 3.8	Max: 14.7	Mean: 11.5	Mov. Avg: 6.6
+Episode 68 (211 sec)  -- 	Min: 5.4	Max: 15.6	Mean: 11.9	Mov. Avg: 6.6
+Episode 69 (211 sec)  -- 	Min: 2.1	Max: 16.9	Mean: 11.0	Mov. Avg: 6.7
+Episode 70 (211 sec)  -- 	Min: 5.8	Max: 16.0	Mean: 11.7	Mov. Avg: 6.8
+Episode 71 (211 sec)  -- 	Min: 5.1	Max: 18.5	Mean: 12.2	Mov. Avg: 6.9
+Episode 72 (211 sec)  -- 	Min: 5.6	Max: 22.6	Mean: 14.0	Mov. Avg: 7.0
+Episode 73 (211 sec)  -- 	Min: 6.2	Max: 20.1	Mean: 13.9	Mov. Avg: 7.0
+Episode 74 (211 sec)  -- 	Min: 5.3	Max: 16.9	Mean: 11.9	Mov. Avg: 7.1
+Episode 75 (211 sec)  -- 	Min: 6.9	Max: 14.9	Mean: 12.3	Mov. Avg: 7.2
+Episode 76 (211 sec)  -- 	Min: 3.6	Max: 17.7	Mean: 12.7	Mov. Avg: 7.3
+Episode 77 (211 sec)  -- 	Min: 8.6	Max: 24.0	Mean: 13.5	Mov. Avg: 7.3
+Episode 78 (211 sec)  -- 	Min: 9.1	Max: 27.7	Mean: 14.2	Mov. Avg: 7.4
+Episode 79 (211 sec)  -- 	Min: 7.5	Max: 18.0	Mean: 13.0	Mov. Avg: 7.5
+Episode 80 (211 sec)  -- 	Min: 8.2	Max: 16.4	Mean: 13.0	Mov. Avg: 7.6
+Episode 81 (211 sec)  -- 	Min: 4.6	Max: 19.7	Mean: 12.6	Mov. Avg: 7.6
+Episode 82 (211 sec)  -- 	Min: 10.5	Max: 18.3	Mean: 14.3	Mov. Avg: 7.7
+Episode 83 (211 sec)  -- 	Min: 9.5	Max: 22.1	Mean: 14.6	Mov. Avg: 7.8
+Episode 84 (211 sec)  -- 	Min: 9.1	Max: 20.1	Mean: 14.8	Mov. Avg: 7.9
+Episode 85 (211 sec)  -- 	Min: 6.2	Max: 19.9	Mean: 14.6	Mov. Avg: 8.0
+Episode 86 (211 sec)  -- 	Min: 14.0	Max: 21.2	Mean: 15.9	Mov. Avg: 8.0
+Episode 87 (211 sec)  -- 	Min: 7.6	Max: 17.9	Mean: 14.7	Mov. Avg: 8.1
+Episode 88 (211 sec)  -- 	Min: 14.0	Max: 21.1	Mean: 17.2	Mov. Avg: 8.2
+Episode 89 (211 sec)  -- 	Min: 11.8	Max: 21.7	Mean: 17.0	Mov. Avg: 8.3
+Episode 90 (211 sec)  -- 	Min: 10.5	Max: 21.0	Mean: 16.5	Mov. Avg: 8.4
+Episode 91 (211 sec)  -- 	Min: 12.6	Max: 21.5	Mean: 17.9	Mov. Avg: 8.5
+Episode 92 (211 sec)  -- 	Min: 10.5	Max: 20.3	Mean: 17.2	Mov. Avg: 8.6
+Episode 93 (211 sec)  -- 	Min: 11.5	Max: 25.1	Mean: 18.9	Mov. Avg: 8.7
+Episode 94 (211 sec)  -- 	Min: 12.3	Max: 25.6	Mean: 20.1	Mov. Avg: 8.8
+Episode 95 (211 sec)  -- 	Min: 14.9	Max: 23.5	Mean: 20.5	Mov. Avg: 9.0
+Episode 96 (211 sec)  -- 	Min: 10.9	Max: 28.5	Mean: 19.5	Mov. Avg: 9.1
+Episode 97 (211 sec)  -- 	Min: 15.1	Max: 24.2	Mean: 19.7	Mov. Avg: 9.2
+Episode 98 (211 sec)  -- 	Min: 18.1	Max: 24.3	Mean: 20.7	Mov. Avg: 9.3
+Episode 99 (211 sec)  -- 	Min: 13.4	Max: 25.1	Mean: 20.6	Mov. Avg: 9.4
+Episode 100 (211 sec)  -- 	Min: 7.2	Max: 25.4	Mean: 20.2	Mov. Avg: 9.5
+Episode 101 (211 sec)  -- 	Min: 12.3	Max: 29.0	Mean: 21.2	Mov. Avg: 9.7
+Episode 102 (211 sec)  -- 	Min: 16.5	Max: 31.3	Mean: 22.8	Mov. Avg: 10.0
+Episode 103 (211 sec)  -- 	Min: 17.1	Max: 33.2	Mean: 23.0	Mov. Avg: 10.2
+Episode 104 (211 sec)  -- 	Min: 16.3	Max: 25.2	Mean: 20.9	Mov. Avg: 10.4
+Episode 105 (211 sec)  -- 	Min: 17.7	Max: 27.5	Mean: 22.5	Mov. Avg: 10.6
+Episode 106 (211 sec)  -- 	Min: 8.1	Max: 25.5	Mean: 20.2	Mov. Avg: 10.8
+Episode 107 (211 sec)  -- 	Min: 15.4	Max: 26.7	Mean: 21.7	Mov. Avg: 11.0
+Episode 108 (211 sec)  -- 	Min: 11.5	Max: 32.5	Mean: 22.4	Mov. Avg: 11.2
+Episode 109 (211 sec)  -- 	Min: 11.5	Max: 25.3	Mean: 17.1	Mov. Avg: 11.3
+Episode 110 (211 sec)  -- 	Min: 10.1	Max: 31.4	Mean: 20.8	Mov. Avg: 11.5
+Episode 111 (211 sec)  -- 	Min: 12.2	Max: 27.5	Mean: 19.0	Mov. Avg: 11.7
+Episode 112 (211 sec)  -- 	Min: 13.7	Max: 26.7	Mean: 20.4	Mov. Avg: 11.9
+Episode 113 (211 sec)  -- 	Min: 14.7	Max: 27.1	Mean: 21.7	Mov. Avg: 12.0
+Episode 114 (211 sec)  -- 	Min: 16.3	Max: 28.6	Mean: 23.2	Mov. Avg: 12.2
+Episode 115 (211 sec)  -- 	Min: 13.7	Max: 27.0	Mean: 20.5	Mov. Avg: 12.4
+Episode 116 (211 sec)  -- 	Min: 12.0	Max: 32.8	Mean: 22.0	Mov. Avg: 12.6
+Episode 117 (211 sec)  -- 	Min: 13.4	Max: 26.0	Mean: 19.9	Mov. Avg: 12.8
+Episode 118 (211 sec)  -- 	Min: 14.3	Max: 28.0	Mean: 22.5	Mov. Avg: 12.9
+Episode 119 (211 sec)  -- 	Min: 15.0	Max: 29.6	Mean: 22.6	Mov. Avg: 13.1
+Episode 120 (211 sec)  -- 	Min: 9.3	Max: 27.7	Mean: 19.5	Mov. Avg: 13.3
+Episode 121 (211 sec)  -- 	Min: 16.5	Max: 39.6	Mean: 23.4	Mov. Avg: 13.4
+Episode 122 (211 sec)  -- 	Min: 17.9	Max: 28.9	Mean: 23.5	Mov. Avg: 13.6
+Episode 123 (211 sec)  -- 	Min: 18.3	Max: 30.3	Mean: 24.2	Mov. Avg: 13.8
+Episode 124 (211 sec)  -- 	Min: 17.9	Max: 39.3	Mean: 24.7	Mov. Avg: 14.0
+Episode 125 (211 sec)  -- 	Min: 13.6	Max: 37.1	Mean: 24.0	Mov. Avg: 14.2
+Episode 126 (211 sec)  -- 	Min: 17.5	Max: 27.3	Mean: 22.0	Mov. Avg: 14.3
+Episode 127 (211 sec)  -- 	Min: 15.6	Max: 29.5	Mean: 22.4	Mov. Avg: 14.5
+Episode 128 (211 sec)  -- 	Min: 17.6	Max: 28.9	Mean: 22.4	Mov. Avg: 14.7
+Episode 129 (211 sec)  -- 	Min: 21.5	Max: 28.4	Mean: 24.6	Mov. Avg: 14.9
+Episode 130 (211 sec)  -- 	Min: 20.3	Max: 29.6	Mean: 25.6	Mov. Avg: 15.0
+Episode 131 (211 sec)  -- 	Min: 16.6	Max: 29.2	Mean: 24.4	Mov. Avg: 15.2
+Episode 132 (211 sec)  -- 	Min: 22.5	Max: 38.9	Mean: 27.1	Mov. Avg: 15.4
+Episode 133 (211 sec)  -- 	Min: 15.2	Max: 30.6	Mean: 24.3	Mov. Avg: 15.6
+Episode 134 (211 sec)  -- 	Min: 17.7	Max: 31.7	Mean: 24.8	Mov. Avg: 15.7
+Episode 135 (211 sec)  -- 	Min: 21.9	Max: 29.4	Mean: 25.2	Mov. Avg: 15.9
+Episode 136 (211 sec)  -- 	Min: 18.9	Max: 28.1	Mean: 24.6	Mov. Avg: 16.1
+Episode 137 (211 sec)  -- 	Min: 21.3	Max: 32.2	Mean: 27.2	Mov. Avg: 16.3
+Episode 138 (211 sec)  -- 	Min: 17.4	Max: 29.7	Mean: 24.2	Mov. Avg: 16.4
+Episode 139 (212 sec)  -- 	Min: 21.8	Max: 33.5	Mean: 27.0	Mov. Avg: 16.6
+Episode 140 (212 sec)  -- 	Min: 21.0	Max: 35.9	Mean: 27.6	Mov. Avg: 16.8
+Episode 141 (212 sec)  -- 	Min: 18.5	Max: 32.5	Mean: 27.0	Mov. Avg: 17.0
+Episode 142 (212 sec)  -- 	Min: 21.2	Max: 34.0	Mean: 26.6	Mov. Avg: 17.2
+Episode 143 (212 sec)  -- 	Min: 11.1	Max: 34.8	Mean: 27.5	Mov. Avg: 17.4
+Episode 144 (212 sec)  -- 	Min: 22.0	Max: 35.9	Mean: 30.0	Mov. Avg: 17.6
+Episode 145 (212 sec)  -- 	Min: 18.0	Max: 36.7	Mean: 29.6	Mov. Avg: 17.8
+Episode 146 (212 sec)  -- 	Min: 21.7	Max: 35.3	Mean: 30.2	Mov. Avg: 18.1
+Episode 147 (212 sec)  -- 	Min: 14.9	Max: 35.4	Mean: 29.9	Mov. Avg: 18.3
+Episode 148 (212 sec)  -- 	Min: 19.1	Max: 35.2	Mean: 30.3	Mov. Avg: 18.5
+Episode 149 (212 sec)  -- 	Min: 20.4	Max: 37.9	Mean: 32.5	Mov. Avg: 18.7
+Episode 150 (212 sec)  -- 	Min: 21.6	Max: 36.3	Mean: 32.2	Mov. Avg: 19.0
+Episode 151 (212 sec)  -- 	Min: 15.9	Max: 39.3	Mean: 32.0	Mov. Avg: 19.2
+Episode 152 (212 sec)  -- 	Min: 25.4	Max: 36.6	Mean: 31.7	Mov. Avg: 19.4
+Episode 153 (212 sec)  -- 	Min: 19.1	Max: 37.4	Mean: 31.8	Mov. Avg: 19.6
+Episode 154 (212 sec)  -- 	Min: 24.6	Max: 37.4	Mean: 33.4	Mov. Avg: 19.9
+Episode 155 (212 sec)  -- 	Min: 25.1	Max: 37.1	Mean: 32.4	Mov. Avg: 20.1
+Episode 156 (212 sec)  -- 	Min: 24.5	Max: 37.3	Mean: 31.7	Mov. Avg: 20.3
+Episode 157 (212 sec)  -- 	Min: 24.9	Max: 38.0	Mean: 32.7	Mov. Avg: 20.5
+Episode 158 (211 sec)  -- 	Min: 19.4	Max: 37.1	Mean: 32.4	Mov. Avg: 20.8
+Episode 159 (212 sec)  -- 	Min: 25.3	Max: 37.9	Mean: 32.3	Mov. Avg: 21.0
+Episode 160 (212 sec)  -- 	Min: 25.3	Max: 37.7	Mean: 34.0	Mov. Avg: 21.2
+Episode 161 (212 sec)  -- 	Min: 28.3	Max: 38.4	Mean: 34.6	Mov. Avg: 21.5
+Episode 162 (212 sec)  -- 	Min: 29.7	Max: 38.0	Mean: 35.8	Mov. Avg: 21.7
+Episode 163 (211 sec)  -- 	Min: 28.9	Max: 37.7	Mean: 34.2	Mov. Avg: 22.0
+Episode 164 (212 sec)  -- 	Min: 30.6	Max: 37.9	Mean: 35.7	Mov. Avg: 22.2
+Episode 165 (212 sec)  -- 	Min: 31.7	Max: 39.2	Mean: 35.1	Mov. Avg: 22.5
+Episode 166 (212 sec)  -- 	Min: 30.9	Max: 39.4	Mean: 36.2	Mov. Avg: 22.7
+Episode 167 (211 sec)  -- 	Min: 23.7	Max: 39.4	Mean: 34.9	Mov. Avg: 23.0
+Episode 168 (212 sec)  -- 	Min: 31.5	Max: 38.6	Mean: 35.3	Mov. Avg: 23.2
+Episode 169 (212 sec)  -- 	Min: 30.0	Max: 38.0	Mean: 35.0	Mov. Avg: 23.4
+Episode 170 (212 sec)  -- 	Min: 32.5	Max: 38.7	Mean: 35.5	Mov. Avg: 23.7
+Episode 171 (212 sec)  -- 	Min: 29.5	Max: 37.8	Mean: 34.2	Mov. Avg: 23.9
+Episode 172 (212 sec)  -- 	Min: 30.7	Max: 38.7	Mean: 35.7	Mov. Avg: 24.1
+Episode 173 (212 sec)  -- 	Min: 29.5	Max: 38.6	Mean: 34.4	Mov. Avg: 24.3
+Episode 174 (212 sec)  -- 	Min: 32.1	Max: 39.5	Mean: 36.8	Mov. Avg: 24.6
+Episode 175 (212 sec)  -- 	Min: 28.4	Max: 37.9	Mean: 35.2	Mov. Avg: 24.8
+Episode 176 (212 sec)  -- 	Min: 33.5	Max: 38.6	Mean: 37.0	Mov. Avg: 25.0
+Episode 177 (212 sec)  -- 	Min: 34.9	Max: 39.4	Mean: 37.3	Mov. Avg: 25.3
+Episode 178 (212 sec)  -- 	Min: 34.5	Max: 39.1	Mean: 37.0	Mov. Avg: 25.5
+Episode 179 (211 sec)  -- 	Min: 33.4	Max: 39.2	Mean: 37.3	Mov. Avg: 25.8
+Episode 180 (212 sec)  -- 	Min: 35.3	Max: 39.5	Mean: 37.8	Mov. Avg: 26.0
+Episode 181 (212 sec)  -- 	Min: 32.8	Max: 39.5	Mean: 37.2	Mov. Avg: 26.2
+Episode 182 (212 sec)  -- 	Min: 29.9	Max: 39.4	Mean: 37.0	Mov. Avg: 26.5
+Episode 183 (212 sec)  -- 	Min: 29.6	Max: 38.6	Mean: 34.0	Mov. Avg: 26.7
+Episode 184 (211 sec)  -- 	Min: 31.2	Max: 39.2	Mean: 36.0	Mov. Avg: 26.9
+Episode 185 (212 sec)  -- 	Min: 32.3	Max: 39.1	Mean: 36.7	Mov. Avg: 27.1
+Episode 186 (212 sec)  -- 	Min: 30.9	Max: 39.0	Mean: 36.0	Mov. Avg: 27.3
+Episode 187 (212 sec)  -- 	Min: 29.9	Max: 39.4	Mean: 36.2	Mov. Avg: 27.5
+Episode 188 (212 sec)  -- 	Min: 34.5	Max: 39.5	Mean: 36.9	Mov. Avg: 27.7
+Episode 189 (212 sec)  -- 	Min: 35.6	Max: 39.0	Mean: 37.1	Mov. Avg: 27.9
+Episode 190 (212 sec)  -- 	Min: 27.9	Max: 39.3	Mean: 36.8	Mov. Avg: 28.1
+Episode 191 (212 sec)  -- 	Min: 30.1	Max: 39.4	Mean: 35.9	Mov. Avg: 28.3
+Episode 192 (212 sec)  -- 	Min: 27.4	Max: 39.5	Mean: 35.8	Mov. Avg: 28.5
+Episode 193 (212 sec)  -- 	Min: 27.9	Max: 39.2	Mean: 35.8	Mov. Avg: 28.7
+Episode 194 (212 sec)  -- 	Min: 26.1	Max: 37.9	Mean: 33.4	Mov. Avg: 28.8
+Episode 195 (212 sec)  -- 	Min: 25.8	Max: 39.3	Mean: 33.6	Mov. Avg: 28.9
+Episode 196 (212 sec)  -- 	Min: 31.2	Max: 39.4	Mean: 37.2	Mov. Avg: 29.1
+Episode 197 (212 sec)  -- 	Min: 30.1	Max: 38.6	Mean: 35.1	Mov. Avg: 29.2
+Episode 198 (212 sec)  -- 	Min: 26.2	Max: 38.6	Mean: 35.8	Mov. Avg: 29.4
+Episode 199 (212 sec)  -- 	Min: 28.8	Max: 36.8	Mean: 34.3	Mov. Avg: 29.5
+Episode 200 (212 sec)  -- 	Min: 28.5	Max: 35.5	Mean: 32.8	Mov. Avg: 29.7
+Episode 201 (212 sec)  -- 	Min: 26.8	Max: 38.7	Mean: 35.6	Mov. Avg: 29.8
+Episode 202 (212 sec)  -- 	Min: 32.2	Max: 38.5	Mean: 36.4	Mov. Avg: 29.9
+Episode 203 (212 sec)  -- 	Min: 27.0	Max: 37.7	Mean: 34.0	Mov. Avg: 30.0
+
+Environment SOLVED in 103 episodes!	Moving Average =30.0 over last 100 episodes
