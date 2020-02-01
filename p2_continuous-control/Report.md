@@ -10,7 +10,7 @@
 
 For this project, you will work with the [Reacher](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#reacher) environment.
 
-![Trained Agent][image1]
+![Trained Agent](https://user-images.githubusercontent.com/10624937/43851024-320ba930-9aff-11e8-8493-ee547c6af349.gif
 
 In this environment, a double-jointed arm can move to target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible.
 
@@ -112,17 +112,11 @@ Experience replay is utilized to prevent correlation between sequence of steps. 
 
 The agent has not prior knowledge of the transition model.  In order to find the optimal model, the agent must continue to level of exploration to discovery better, optimal actions/transitions.  During the selection of an action by the agent, the Ornstein-Uhlenbeck noise process is applied to the deterministic continuous action result.  This will result in actions taken by the agent that vary enough from the model explore and possibly discovery better actions.
 
-#### Ideas for Future Work
-
-- Distributed training with 20 agents was utilized in order to increase training efficiency.  Additional agents could be utilized to further incrased efficiency.
-
-- A low-dimensional network was utilized, as the environment included 33 states, which includes the position and velocity of the joints, etc.  When taking the model to a real-world/physical agent, this state information may not be available.  Therefore, it would be desirable to apply DDPG based off of camera pixels, resulting in a high-dimensional network.
-
 ### Results
 
 Full results can be found in the `nohup.out` file.  The problem was solved in 103 episodes, with an average reward of at least +30 over the next 100 episodes.
 
-![Results][results.png]
+![Results](results.png)
 
 ```
 Episode 189 (213 sec)  --     Min: 35.6       Max: 39.0       Mean: 37.1      Mov. Avg: 27.9
@@ -143,3 +137,9 @@ Episode 203 (213 sec)  --     Min: 27.0       Max: 37.7       Mean: 34.0      Mo
 
 Environment SOLVED in 103 episodes!     Moving Average =30.0 over last 100 episodes
 ```
+
+### Ideas for Future Work
+
+- Distributed training with 20 agents was utilized in order to increase training efficiency.  Additional agents could be utilized to further incrased efficiency.
+
+- A low-dimensional network was utilized, as the environment included 33 states, which includes the position and velocity of the joints, etc.  When taking the model to a real-world/physical agent, this state information may not be available.  Therefore, it would be desirable to apply DDPG based off of camera pixels, resulting in a high-dimensional network.
