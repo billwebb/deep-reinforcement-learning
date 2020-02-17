@@ -8,7 +8,7 @@ import datetime
 import time
 import torch
 
-env = UnityEnvironment(file_name='./Reacher_Linux_NoVis/Reacher.x86_64')
+env = UnityEnvironment(file_name='./Reacher_Windows_x86_64/Reacher_Windows_x86_64/Reacher')
 #my_env = UnityEnvironment(file_name='./Reacher_Linux/Reacher.x86_64')
 
 brain_name = env.brain_names[0]
