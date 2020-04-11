@@ -8,7 +8,7 @@ import datetime
 import time
 import torch
 
-env = UnityEnvironment(file_name='./Tennis_Windows_x86_64/Tennis.exe')
+env = UnityEnvironment(file_name='./Tennis_Windows_x86_64/Tennis.exe', no_graphics=True)
 #my_env = UnityEnvironment(file_name='./Reacher_Linux/Reacher.x86_64')
 
 brain_name = env.brain_names[0]
@@ -67,14 +67,14 @@ def maddpg(n_episodes=5000, max_t=1000, solved_score=0.5, consec_episodes=100, p
         min_scores.append(np.min(scores))             # save lowest score for a single agent
         max_scores.append(np.max(scores))             # save highest score for a single agent
         mean_scores.append(np.mean(scores))           # save mean score for the episode
-        scores_window.append(mean_scores[-1])         # save mean score to window
+        scores_window.append(max_scores[-1])          # save max score from winning agent to window
         moving_avgs.append(np.mean(scores_window))    # save moving average
 
         if i_episode % print_every == 0:
             print('\rEpisode {} ({} sec)  -- \tMin: {:.1f}\tMax: {:.1f}\tMean: {:.1f}\tMov. Avg: {:.1f}'.format(\
                   i_episode, round(duration), min_scores[-1], max_scores[-1], mean_scores[-1], moving_avgs[-1]))
 
-        if train_mode and mean_scores[-1] > best_score:
+        if train_mode and max_scores[-1] > best_score:
             for agent_num in range(len(env_info.agents)):
                 torch.save(agents.actor_local[agent_num].state_dict(), str(agent_num) + "." + actor_path)
             torch.save(agents.critic_local.state_dict(), critic_path)
@@ -88,7 +88,7 @@ def maddpg(n_episodes=5000, max_t=1000, solved_score=0.5, consec_episodes=100, p
                 torch.save(agents.critic_local.state_dict(), critic_path)
             break
 
-    return mean_scores, moving_avgs
+    return max_scores, moving_avgs
 
 # run the training loop
 agents = MADDPG(state_size=env_info.vector_observations.shape[1], action_size=brain.vector_action_space_size, num_agents=len(env_info.agents), random_seed=1)

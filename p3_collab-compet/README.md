@@ -60,7 +60,7 @@ The training process takes many hours, therefore the project has been implemente
 To run the project, run the following -
 
 ``` bash
-python -u .\p3.py 2>%1 > .\p3.log
+python -u .\p3.py 2>&1 > .\p3.log
 ```
 
 Output will go to the p3.log file.

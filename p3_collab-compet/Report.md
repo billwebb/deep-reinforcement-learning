@@ -1,3 +1,7 @@
+[//]: # (Image References)
+
+[image1]: https://user-images.githubusercontent.com/10624937/42135623-e770e354-7d12-11e8-998d-29fc74429ca2.gif "Trained Agent"
+
 ## Project 3: Collaboration and Competition
 
 **Project Submission by Bill Webb**
@@ -56,7 +60,6 @@ The Actor is a policy-based model which is used by the agent to determine action
 
 - Input - 24 states, from the environment
 - Layer 1 - Linear - 512 nodes
-- Batch Normalization Layer
 - Layer 2 - Linear - 256 nodes
 - Output - Linear - 2 action size
 - Tanh activation - to bound the actions
@@ -69,7 +72,6 @@ The Actor is a value-based model which is used by the agent to improve.  The fol
 
 - Input - 24 states, from the environment
 - Layer 1 - Linear - 512 nodes
-- Batch Normalization Layer
 - Layer 2 - Linear - 256 nodes - Actions included
 - Output - Linear - 1 action size
 - ReLU activation - due to sparsity
@@ -81,7 +83,7 @@ The NN returns whether the action taken was good or bad as a feedback loop.
 Given the low-dimensional 24 state size,  hyperparameters presented in the DDPG paper were utilized as a starting place and then adjusted based on learning iterations.
 
 - Buffer size - int(1e6)
-- Batch size - 64
+- Batch size - 128
 - Discount factor (Gamma) - 0.99
 - Soft update for target (off-policy) - 2e-1
 - Actor learning rate - 1e-4
@@ -111,22 +113,27 @@ The agent has not prior knowledge of the transition model.  In order to find the
 
 ### Results
 
-Full results can be found in the `p3.log` file.  The problem was solved in 258 episodes, with an average score of 0.5 over the last 100 episodes.
+Full results can be found in the `p3.log` file.  The problem was solved in 540 episodes, with an average score of 0.5 by the winning Agent over the last 100 episodes.
 
 ![Results](results.png)
 
 ```
-Episode 349 (5 sec)  --         Min: 0.4        Max: 0.4        Mean: 0.4       Mov. Avg: 0.4
-Episode 350 (0 sec)  --         Min: -0.0       Max: 0.0        Mean: -0.0      Mov. Avg: 0.4
-Episode 351 (21 sec)  --        Min: 1.8        Max: 1.8        Mean: 1.8       Mov. Avg: 0.5
-Episode 352 (0 sec)  --         Min: -0.0       Max: 0.0        Mean: -0.0      Mov. Avg: 0.5
-Episode 353 (22 sec)  --        Min: 1.9        Max: 2.0        Mean: 1.9       Mov. Avg: 0.5
-Episode 354 (3 sec)  --         Min: 0.2        Max: 0.2        Mean: 0.2       Mov. Avg: 0.5
-Episode 355 (3 sec)  --         Min: 0.2        Max: 0.2        Mean: 0.2       Mov. Avg: 0.5
-Episode 356 (18 sec)  --        Min: 1.5        Max: 1.5        Mean: 1.5       Mov. Avg: 0.5
-Episode 357 (4 sec)  --         Min: 0.3        Max: 0.3        Mean: 0.3       Mov. Avg: 0.5
-Episode 358 (14 sec)  --        Min: 1.2        Max: 1.2        Mean: 1.2       Mov. Avg: 0.5
-Environment SOLVED in 258 episodes!     Moving Average =0.5 over last 100 episodes
+Episode 626 (0 sec)  -- 	Min: -0.0	Max: 0.0	Mean: -0.0	Mov. Avg: 0.4
+Episode 627 (7 sec)  -- 	Min: 0.6	Max: 0.6	Mean: 0.6	Mov. Avg: 0.5
+Episode 628 (2 sec)  -- 	Min: 0.1	Max: 0.2	Mean: 0.1	Mov. Avg: 0.5
+Episode 629 (0 sec)  -- 	Min: -0.0	Max: 0.0	Mean: -0.0	Mov. Avg: 0.5
+Episode 630 (2 sec)  -- 	Min: 0.1	Max: 0.1	Mean: 0.1	Mov. Avg: 0.5
+Episode 631 (16 sec)  -- 	Min: 1.4	Max: 1.4	Mean: 1.4	Mov. Avg: 0.5
+Episode 632 (20 sec)  -- 	Min: 1.8	Max: 1.8	Mean: 1.8	Mov. Avg: 0.5
+Episode 633 (1 sec)  -- 	Min: 0.1	Max: 0.1	Mean: 0.1	Mov. Avg: 0.5
+Episode 634 (10 sec)  -- 	Min: 0.8	Max: 0.9	Mean: 0.8	Mov. Avg: 0.5
+Episode 635 (0 sec)  -- 	Min: -0.0	Max: 0.0	Mean: -0.0	Mov. Avg: 0.5
+Episode 636 (2 sec)  -- 	Min: 0.1	Max: 0.1	Mean: 0.1	Mov. Avg: 0.5
+Episode 637 (5 sec)  -- 	Min: 0.4	Max: 0.4	Mean: 0.4	Mov. Avg: 0.5
+Episode 638 (16 sec)  -- 	Min: 1.3	Max: 1.4	Mean: 1.3	Mov. Avg: 0.5
+Episode 639 (2 sec)  -- 	Min: 0.1	Max: 0.2	Mean: 0.1	Mov. Avg: 0.5
+Episode 640 (13 sec)  -- 	Min: 1.1	Max: 1.2	Mean: 1.1	Mov. Avg: 0.5
+Environment SOLVED in 540 episodes!	Moving Average =0.5 over last 100 episodes
 ```
 
 ### Ideas for Future Work
