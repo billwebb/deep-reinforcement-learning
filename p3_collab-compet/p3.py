@@ -22,7 +22,7 @@ print('Number of agents:', len(env_info.agents))
 print('Size of each action:', brain.vector_action_space_size)
 print('Number of states:', env_info.vector_observations.shape[1])
 
-def maddpg(n_episodes=500, max_t=1000, solved_score=0.5, consec_episodes=100, print_every=1, train_mode=True,
+def maddpg(n_episodes=5000, max_t=1000, solved_score=0.5, consec_episodes=100, print_every=1, train_mode=True,
            actor_path='actor_ckpt.pth', critic_path='critic_ckpt.pth'):
     """Deep Deterministic Policy Gradient (MADDPG)
 

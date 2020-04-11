@@ -10,11 +10,11 @@ import torch.nn.functional as F
 import torch.optim as optim
 
 BUFFER_SIZE = int(1e6)  # replay buffer size
-BATCH_SIZE = 64        # minibatch size
+BATCH_SIZE = 128        # minibatch size
 GAMMA = 0.99            # discount factor
-TAU = 1e-3              # for soft update of target parameters
+TAU = 2e-1             # for soft update of target parameters
 LR_ACTOR = 1e-4         # learning rate of the actor
-LR_CRITIC = 1e-3        # learning rate of the critic
+LR_CRITIC = 3e-4        # learning rate of the critic
 WEIGHT_DECAY = 0        # L2 weight decay
 LEARN_EVERY = 20        # learning timestep interval
 LEARN_NUM = 10          # number of learning passes
@@ -84,10 +84,12 @@ class MADDPG():
             state = torch.from_numpy(states[agent_num]).float().to(device)
             self.actor_local[agent_num].eval()
             with torch.no_grad():
-                action = self.actor_local[agent_num](state[None, ...]).cpu().data.numpy()
+                #action = self.actor_local[agent_num](state[None, ...]).cpu().data.numpy()
+                action = self.actor_local[agent_num](state).cpu().data.numpy()
             self.actor_local[agent_num].train()
             if add_noise:
-                action += self.epsilon * self.noise.sample()
+                #action += self.epsilon * self.noise.sample()
+                action += self.noise.sample()
             actions.append(np.clip(action, -1, 1))
         return actions
 
@@ -120,7 +122,7 @@ class MADDPG():
         # Minimize the loss
         self.critic_optimizer.zero_grad()
         critic_loss.backward()
-        torch.nn.utils.clip_grad_norm_(self.critic_local.parameters(), 1)
+        #torch.nn.utils.clip_grad_norm_(self.critic_local.parameters(), 1)
         self.critic_optimizer.step()
 
         # ---------------------------- update actor ---------------------------- #
@@ -137,8 +139,8 @@ class MADDPG():
         self.soft_update(self.actor_local[agent_num], self.actor_target[agent_num], TAU)
 
         # ---------------------------- update noise ---------------------------- #
-        self.epsilon -= EPSILON_DECAY
-        self.noise.reset()
+        #self.epsilon -= EPSILON_DECAY
+        #self.noise.reset()
 
     def soft_update(self, local_model, target_model, tau):
         """Soft update model parameters.
@@ -165,6 +167,7 @@ class OUNoise:
             sigma: the volatility parameter
         """
         self.mu = mu * np.ones(size)
+        self.size = size
         self.theta = theta
         self.sigma = sigma
         self.seed = random.seed(seed)
@@ -177,7 +180,8 @@ class OUNoise:
     def sample(self):
         """Update internal state and return it as a noise sample."""
         x = self.state
-        dx = self.theta * (self.mu - x) + self.sigma * np.array([random.random() for i in range(len(x))])
+        #dx = self.theta * (self.mu - x) + self.sigma * np.array([random.random() for i in range(len(x))])
+        dx = self.theta * (self.mu - x) + self.sigma * np.random.standard_normal(self.size)
         self.state = x + dx
         return self.state
 
