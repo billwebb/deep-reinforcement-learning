@@ -31,14 +31,30 @@ The environment is considered solved, when the average (over 100 episodes) of th
 
 To set up your python environment to run the code in this repository, follow the instructions below.  This was done on an Windows target using Anaconda Powershell.
 
-1. Create and activate a new environment with Python 3.6.
+1. Download and install Anaconda for Windows: https://www.anaconda.com/distribution/
+
+2. Download and install Git for Windows: https://git-scm.com/download/win
+
+3. Create and activate a new environment with Python 3.6.
 
 ``` bash
 conda create --name pytorch python=3.6
 conda activate pytorch
 ```
 
-2. Clone the repository, and navigate to the python/ folder. This includes the Unity environment for Windows.
+4. Install Pytorch with CUDA support, since GPU acceleration is being used.
+
+``` bash
+conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
+```
+
+5. Install ML-Agents.
+
+``` bash
+pip install mlagents
+```
+
+6. Clone the repository, and navigate to the python/ folder
 
 Then, install several dependencies.
 
@@ -47,11 +63,9 @@ git clone https://github.com/billwebb/deep-reinforcement-learning
 cd deep-reinforcement-learning/python
 pip install .
 ```
-3. Install Pytorch with CUDA support, since GPU acceleration is being used.
+7. Download Unity environment: https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Windows_x86_64.zip
 
-``` bash
-conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
-```
+Then unzip to the `deep-reinforcement-learning` directory.
 
 ### Instructions
 
@@ -63,4 +77,4 @@ To run the project, run the following -
 python -u .\p3.py 2>&1 > .\p3.log
 ```
 
-Output will go to the p3.log file.
+Output will go to the `p3.log` file.
